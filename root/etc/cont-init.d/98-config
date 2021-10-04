@@ -1,10 +1,10 @@
 #!/usr/bin/with-contenv bash
 
 # Install custom opcache configuration
-for fpm_dir in /etc/php*/conf.d/
+for conf_dir in /etc/php*/conf.d/
 do
-    if [[ ! -f "$fpm_dir/z-opcache.conf" ]]
+    if [[ ! -f "$conf_dir/z-opcache.conf" ]]
     then
-        cp /defaults/z-opcache.conf "$fpm_dir/z-opcache.conf"
+        cp /defaults/z-opcache.conf "$conf_dir/z-opcache.conf"
     fi
 done
